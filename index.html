@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A beginner-friendly blog that explains Git & GitHub commands, workflows, interview questions, and best practices.">
+    <title>Git & Github</title>
+    <link href="/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <h1>Git & Github Notes</h1>
+        <table>
+            <caption>Common Git Commands</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Command</th>
+                    <th scope="col">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>git init</code></td>
+                    <td>Initialize a new Git repository. Git creates a hidden directory called .git that stores all the
+                        objects and refs that Git uses.</td>
+                </tr>
+                <tr>
+                    <td><code>git add [file]</code></td>
+                    <td>Add changes in the specified [file] to the staging area.</td>
+                </tr>
+                <tr>
+                    <td><code>git add .</code></td>
+                    <td>Add all changes in the current directory to the staging area.</td>
+                </tr>
+                <tr>
+                    <td><code>git commit -m "message"</code></td>
+                    <td>Commit (save) the staged changes with a "message".</td>
+                </tr>
+                <tr>
+                    <td><code>git remote add origin [url]</code></td>
+                    <td>Add a remote repository with the name "origin".</td>
+                </tr>
+                <tr>
+                    <td><code>git config --global user.name "Your Name"</code></td>
+                    <td>Set your Git username.</td>
+                </tr>
+                <tr>
+                    <td><code>git clone [url]</code></td>
+                    <td>Clone a repository from a remote URL.</td>
+                </tr>
+                <tr>
+                    <td><code>git remote -v</code></td>
+                    <td>List all remote repositories.</td>
+                </tr>
+                <tr>
+                    <td><code>git branch</code></td>
+                    <td>List all branches in the repository.</td>
+                </tr>
+                <tr>
+                    <td><code>git branch -M [Branch Name]</code></td>
+                    <td>Rename the current branch to [Branch Name]</td>
+                </tr>
+                <tr>
+                    <td><code>git checkout [branch]</code></td>
+                    <td>Switch to the specified branch.</td>
+                </tr>
+                <tr>
+                    <td><code>git checkout -b [branch]</code></td>
+                    <td>Create and switch to a new [branch]</td>
+                </tr>
+                <tr>
+                    <td><code>git push origin [branch]</code></td>
+                    <td>Push changes to the specified branch on the remote repository.</td>
+                </tr>
+                <tr>
+                    <td><code>git pull origin [branch]</code></td>
+                    <td>Fetch and merge changes from the specified branch on the remote repository.</td>
+                </tr>
+                <tr>
+                    <td><code>git status</code></td>
+                    <td>Show the status of changes in the working directory and staging area.</td>
+                </tr>
+                <tr>
+                    <td><code>git reset</code></td>
+                    <td>Undo commits</td>
+                </tr>
+                <tr>
+                    <td><code>git log</code></td>
+                    <td>View commit history</td>
+                </tr>
+                <tr>
+                    <td><code>git merge [branch]</code></td>
+                    <td>Merge another [branch] into current one</td>
+                </tr>
+                <tr>
+                    <td><code>git commit --amend</code></td>
+                    <td>Modify the last commit message or include additional changes.</td>
+                </tr>
+                <tr>
+                    <td><code>git reset --soft HEAD~1</code></td>
+                    <td>Undo the last commit but keep changes staged.</td>
+                </tr>
+                <tr>
+                    <td><code>git reset --mixed HEAD~1</code></td>
+                    <td>Undo the last commit and unstage changes.</td>
+                </tr>
+                <tr>
+                    <td><code>git reset --hard HEAD~1</code></td>
+                    <td>Undo the last commit and <b>discard all changes (dangerous)</b>.</td>
+                </tr>
+                <tr>
+                    <td><code>git restore [file]</code></td>
+                    <td>Discard changes in the working directory for a file (safe).</td>
+                </tr>
+                <tr>
+                    <td><code>git restore --staged [file]</code></td>
+                    <td>Unstage a file while keeping changes in the working directory.</td>
+                </tr>
+                <tr>
+                    <td><code>git revert [commit-hash]</code></td>
+                    <td>Create a new commit that reverses the effects of a previous commit. (Safe for shared branches)
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>git clean -fd</code></td>
+                    <td>Remove untracked files and directories. (⚠️ Use with caution)</td>
+                </tr>
+                <tr>
+                    <td><code>git stash</code></td>
+                    <td>Temporarily save uncommitted changes</td>
+                </tr>
+                <tr>
+                    <td><code>git stash pop</code></td>
+                    <td>Apply stashed changes and remove the stash.</td>
+                </tr>
+                <tr>
+                    <td><code>git stash apply</code></td>
+                    <td>Apply stashed changes but keep the stash for reuse.</td>
+                </tr>
+            </tbody>
+        </table>
+        <section>
+            <p>This is a shortlist of the most commonly used Git commands. For beginners, the first 16 are enough and widely used by most GitHub users.</p>
+            <p><u>Fork</u> means copying someone else's repository to your own GitHub account so you can develop or contribute from your side. Later, you can send a pull request to the original owner for merging.</p>
+            <em><strong>Note:</strong> If you want to use GitHub Pages for hosting, ensure your homepage file is named
+                'index.html'</em>
+        </section>
+        <article>
+            <h2>&#9824; Interview Questions</h2>
+            <dl>
+                <dt>1. What is Git and What are the advantages of using Git?</dt>
+                <dd>
+                    <p>
+                        Answer: Git is a distributed version control system (VCS) that helps developers track changes in
+                        source code and collaborate effectively.
+                    </p>
+                    <h5>Advantages of using Git:</h5>
+                    <ul>
+                        <li>Tracks every change with detailed history.</li>
+                        <li>Supports branching and merging for parallel development.</li>
+                        <li>Works offline (distributed).</li>
+                        <li>Fast and efficient performance.</li>
+                        <li>Allows easy collaboration via platforms like GitHub or GitLab.</li>
+                    </ul>
+                </dd>
+
+                <dt>2. What is the difference between Git and GitHub?</dt>
+                <dd>
+                    <p>
+                        Answer: Git is a local version control system, while GitHub is a cloud-based platform for
+                        hosting Git repositories.
+                    </p>
+                    <h5>Key Differences:</h5>
+                    <ul>
+                        <li>Git: Tracks changes in code locally on your computer.</li>
+                        <li>GitHub: Allows you to share code online, collaborate, and manage repositories.</li>
+                    </ul>
+                </dd>
+
+                <dt>3. How do you create a new branch in Git?</dt>
+                <dd>
+                    <p>
+                        Answer: You can create and switch to a new branch using the command below:
+                    </p>
+                    <ul>
+                        <li><code>git checkout -b [new-branch-name]</code></li>
+                    </ul>
+                    <h3>Or, you can create and switch in two steps:</h3>
+                    <ul>
+                        <li><code>git branch [new-branch-name]</code></li>
+                        <li><code>git checkout [new-branch-name]</code></li>
+                    </ul>
+                </dd>
+
+                <dt>4. What is a merge conflict and how do you resolve it?</dt>
+                <dd>
+                    <p>
+                        Answer: A merge conflict occurs when Git cannot automatically merge changes because the same
+                        part of a file was modified differently in two branches.
+                    </p>
+                    <h5>To resolve it:</h5>
+                    <ul>
+                        <li>Git highlights the conflict markers in the file.</li>
+                        <li>You manually edit the file to choose or combine changes.</li>
+                        <li>Then, stage and commit the resolved file.</li>
+                    </ul>
+                    <ul>
+                        <li><code>git add [filename]</code></li>
+                        <li><code>git commit</code></li>
+                    </ul>
+                </dd>
+
+                <dt>5. Explain the purpose of the staging area in Git.</dt>
+                <dd>
+                    <p>
+                        Answer: The staging area in Git is a place where changes are prepared before committing. It
+                        allows you to review and control exactly what will go into your next commit.
+                    </p>
+                </dd>
+
+                <dt>6. How do you revert a commit in Git?</dt>
+                <dd>
+                    <p>
+                        Answer: You can undo changes from a specific commit using:
+                    </p>
+                    <ul>
+                        <li><code>git revert &lt;commit-hash&gt;</code> <span class="comment">// creates a new commit
+                                that reverses the changes.</span>
+                        </li>
+                    </ul>
+                    <h5>To completely remove a commit (use with caution):</h5>
+                    <ul>
+                        <li><code>git reset --hard HEAD~1</code></li>
+                    </ul>
+                </dd>
+
+                <dt>7. What is the purpose of the <code>.gitignore</code> file?</dt>
+                <dd>
+                    <p>
+                        Answer: The .gitignore file tells Git which files or directories to ignore. It helps
+                        keep unnecessary, temporary, or sensitive files out of your repository.
+                    </p>
+                    <h5>Common examples:</h5>
+                    <ul>
+                        <li><code>node_modules/</code></li>
+                        <li><code>.env</code></li>
+                        <li><code>dist/</code></li>
+                    </ul>
+                </dd>
+
+                <dt>8. How can you view the commit history in Git?</dt>
+                <dd>
+                    <p>
+                        Answer: You can use the following commands to view commit history:
+                    </p>
+                    <ul>
+                        <li><code>git log</code> <span class="comment">// shows detailed commit information.</span></li>
+                        <li><code>git log --oneline</code> <span class="comment">// displays a compact view with one
+                                line per commit.</span></li>
+                        <li><code>git log --graph</code> <span class="comment">// shows a visual representation of the
+                                branch structure.</span></li>
+                        <li><code>git log --oneline --graph</code> <span class="comment">// combines both compact view
+                                and graph for a clear summary.</span></li>
+                    </ul>
+                </dd>
+
+            </dl>
+        </article>
+        <article>
+            <h2>Basic things of git and github</h2>
+            <ul>
+                <li><strong>Repository:</strong> A folder where Git tracks your project and its history.</li>
+                <li><strong>Clone:</strong> Make a copy of a remote repository on your computer.</li>
+                <li><strong>Stage:</strong> Tell Git which changes you want to save next.</li>
+                <li><strong>Commit:</strong> Save a snapshot of your staged changes.</li>
+                <li><strong>Branch:</strong> Work on different versions or features at the same time.</li>
+                <li><strong>Merge:</strong> Combine changes from different branches.</li>
+                <li><strong>Pull:</strong> Get the latest changes from a remote repository.</li>
+                <li><strong>Push:</strong> Send your changes to a remote repository.</li>
+            </ul>
+            <h3>Basic process of creating github repository</h3>
+            <ul>
+                <li>Create a repository from github's website</li>
+                <li>from vscode terminal run this command_</li>
+                <li><code>git init</code></li>
+                <li><code>git add .</code></li>
+                <li><code>git commit -m "message"</code></li>
+                <li><code>git branch -M [Branch Name]</code></li>
+                <li><code>git remote add origin [url]</code></li>
+                <li><code>git push -u origin [Branch Name]</code></li>
+            </ul>
+            <h3>Or connect your github account with vscode to use the inbuild feature</h3>
+            <ul>
+                <li>Go to source control tab</li>
+                <li>Initialize repository</li>
+                <li>Give commit message and press the commit button</li>
+                <li>Choose repository type (public/private)</li>
+                <li>Finally sync the changes</li>
+            </ul>
+            <h2>Save or commit the further changes to github repository</h2>
+            <ul>
+                <li><code>git add .</code></li>
+                <li><code>git commit -m "message"</code></li>
+                <li><code>git push -u origin [Branch Name]</code></li>
+            </ul>
+            <h2>Git Best Practices</h2>
+            <ul>
+                <li>Write meaningful commit messages</li>
+                <li>Use branches for features and fixes</li>
+                <li>Pull changes before pushing</li>
+                <li>Use <code>.gitignore</code> to avoid committing sensitive or unnecessary files</li>
+                <li>Never use <code>git reset --hard</code> on shared branches</li>
+            </ul>
+        </article>
+    </main>
+    <footer>
+        <p>This Blog-page is created by - Pratush - <a href="https://pratushportfolio.vercel.app/"
+                target="_blank" rel="noopener">pratushportfolio.vercel.app</a></p>
+        <p>If you are interested to learn more then checkout this website - <a href="https://www.w3schools.com/git/"
+                target="_blank" rel="noopener">w3schools.com/git</a></p>
+    </footer>
+</body>
+
+</html>
