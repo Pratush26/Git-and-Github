@@ -324,6 +324,14 @@
                 <li><code>git commit --amend --no-edit</code><p class="comment">// git commit --amend → replaces (rewrites) the most recent commit with whatever is currently staged</p><p class="comment">// --no-edit → tells Git “don't open the editor, just keep the same commit message as before.” <br> (Don't write if you want to change the commit message also)</p></li>
                 <li><code>git push origin main --force</code></li>
             </ul>
+            <h3>How to create a new repo keeping the commit history of a old repo</h3>
+            <ul>
+                <li>Open a folder</li>
+                <li><code>git clone [old repository clone url]</code></li>
+                <li>Create a repository manually</li>
+                <li><code>git remote set-url [new repository link]</code><p class="comment">// git commit --amend → replaces (rewrites) the most recent commit with whatever is currently staged</p><p class="comment">// --no-edit → tells Git “don't open the editor, just keep the same commit message as before.” <br> (Don't write if you want to change the commit message also)</p></li>
+                <li><code>git push -u origin main</code></li>
+            </ul>
             <h2>Git Best Practices</h2>
             <ul>
                 <li>Write meaningful commit messages</li>
