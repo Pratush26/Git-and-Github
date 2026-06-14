@@ -334,6 +334,8 @@
             </ul>
             <h3>How to push code with local commits into an existing repository</h3>
             <ul>
+                <li>If there is no remote configured yet, use:<br /><code>git remote add origin [repository url]</code><p class="comment">// Add a new remote repository and name it 'origin'</p></li>
+                <li>Else if replacing an existing remote, use:<br /><code>git remote set-url origin [repository url]</code><p class="comment">// Update the existing 'origin' remote to point to a new repository URL</p></li>
                 <li><code>git add .</code></li>
                 <li><code>git commit -m "message"</code></li>
                 <li><code>git fetch origin</code><p class="comment">// Download the latest changes from the remote repository without modifying your local branch</p></li>
