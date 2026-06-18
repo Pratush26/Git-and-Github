@@ -339,8 +339,9 @@
                 <li><code>git add .</code></li>
                 <li><code>git commit -m "message"</code></li>
                 <li><code>git fetch origin</code><p class="comment">// Download the latest changes from the remote repository without modifying your local branch</p></li>
-                <li><code>git merge origin/main</code> <p class="comment">// Merge the latest remote changes into your current branch</p></li>
-                <li><code>git push origin main</code><p class="comment">// Upload your local commits to the remote repository</p></li>
+                <li>If you want to overwrite the previous commits: <br/> <code>git push -u origin main --force</code><p class="comment">// Upload your local commits to the remote repository</p></li>
+                <li>Else if you want to keep the previous commits: <br /> <code>git merge origin/main --allow-unrelated-histories</code> <p class="comment">// Merge the latest remote changes into your current branch and resolve conflict</p></li>
+                <li><code>git push -u origin main</code><p class="comment">// Upload your local commits to the remote repository</p></li>
             </ul>
             <h3>How to push code into a new branch</h3>
             <ul>
